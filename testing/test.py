@@ -1,19 +1,6 @@
-import sys
-import os
 import unittest
 from fractions import Fraction
-
-# Specify the directory name directly if the script is always in 'testing'
-current_dir = 'testing'
-
-# Get the path to the 'calculator' directory relative to 'testing'
-calculator_dir = os.path.abspath(os.path.join(current_dir, '..', 'calculator'))
-
-# Add 'calculator' directory to the sys.path
-sys.path.append(calculator_dir)
-
-# Import the sum function from my_sum module in 'calculator'
-from my_sum import sum
+from Calculator.my_sum import sum  # Assuming my_sum.py is in calculator directory
 
 class TestSum(unittest.TestCase):
     def test_list_int(self):
@@ -42,6 +29,7 @@ class TestSum(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
 
 
 
